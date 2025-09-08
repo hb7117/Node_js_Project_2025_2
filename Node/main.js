@@ -1,9 +1,14 @@
 let express = require('express');           //express 모듈을 가져온다.
 let app = express();                        //express를 App 이름으로 정의헉고 사용한다.
 
-app.get('/' , function(req, res){
+app.get('/' , function(req, res){           //가본 라우터에서 Hello world 를 반환한다.
     res.send('Hello world');
 });
+
+app.get('/about', function(req, res){       //about에서 about data 를 반환한다.    
+    res.send('Player data 11111');
+    //res.send('about data');
+})
 
 app.listen(3000, function(){
 
