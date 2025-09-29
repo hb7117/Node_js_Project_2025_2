@@ -8,14 +8,19 @@ public class Protocols
     {
         public class common
         {
-            public int cmd;             //명령 숫자 표시
-            public string message;      //메세지
+            public int cmd;                             //명령 숫자 표시
+            public string message;                      //메세지
         }
 
         public class req_data : common
         {
-            public int id;               //id를 받는다.
-            public string data;          //전달 데이터
+            public int id;                              //id를 받는다.
+            public string data;                         //전달 데이터 
+        }
+
+        public class res_data : common
+        {
+            public req_data[] result;                   //list or Array 값을 받는다.
         }
     }
 }
